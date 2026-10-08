@@ -5,3 +5,4 @@ out
 *.local
 .impeccable/review
 .impeccable/config.local.json
+*.tsbuildinfo
