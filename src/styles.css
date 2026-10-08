@@ -229,8 +229,8 @@ textarea {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  height: var(--header);
-  padding: 0 var(--gutter);
+  height: calc(var(--header) + env(safe-area-inset-top, 0px));
+  padding: env(safe-area-inset-top, 0px) var(--gutter) 0;
   background-color: var(--ground);
   transition:
     background-color var(--dye),
@@ -1111,6 +1111,14 @@ textarea {
   max-width: 32ch;
   font-size: var(--text-small);
   color: var(--fg-2);
+}
+
+.form__fallback {
+  color: var(--fg);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  text-decoration-color: var(--accent);
 }
 
 /* ---------- Footer ---------- */

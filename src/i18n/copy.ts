@@ -32,6 +32,7 @@ export type Copy = {
     submit: string
     note: string
     nameError: string
+    fallback: string
     instagram: string
   }
   footer: { madeIn: string; rights: string }
@@ -118,6 +119,7 @@ const az: Copy = {
     submit: 'WhatsApp-da göndərin',
     note: 'Düymə WhatsApp-ı mesajınız hazır halda açır.',
     nameError: 'Adınızı yazın ki, sizə necə müraciət edəcəyimizi bilək.',
+    fallback: 'WhatsApp açılmadısa, bu linkə toxunun',
     instagram: 'Instagram-da izləyin',
   },
   footer: { madeIn: 'Azərbaycanda hazırlanıb', rights: 'Bütün hüquqlar qorunur.' },
@@ -212,6 +214,7 @@ const en: Copy = {
     submit: 'Send on WhatsApp',
     note: 'The button opens WhatsApp with your message ready to send.',
     nameError: 'Add your name so we know who we are writing to.',
+    fallback: "If WhatsApp didn't open, use this link",
     instagram: 'Follow on Instagram',
   },
   footer: { madeIn: 'Made in Azerbaijan', rights: 'All rights reserved.' },
@@ -301,6 +304,7 @@ const ru: Copy = {
     submit: 'Отправить в WhatsApp',
     note: 'Кнопка откроет WhatsApp с готовым сообщением.',
     nameError: 'Укажите имя, чтобы мы знали, как к вам обращаться.',
+    fallback: 'Если WhatsApp не открылся, нажмите здесь',
     instagram: 'Мы в Instagram',
   },
   footer: { madeIn: 'Сделано в Азербайджане', rights: 'Все права защищены.' },

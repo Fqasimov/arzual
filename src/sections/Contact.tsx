@@ -15,6 +15,7 @@ export function Contact() {
   const [date, setDate] = useState('')
   const [message, setMessage] = useState('')
   const [error, setError] = useState(false)
+  const [sentUrl, setSentUrl] = useState<string | null>(null)
 
   const submit = (e: FormEvent) => {
     e.preventDefault()
@@ -30,7 +31,14 @@ export function Contact() {
       date: when,
       message: message.trim(),
     })
-    window.open(whatsappUrl(text), '_blank', 'noopener,noreferrer')
+    const url = whatsappUrl(text)
+    // A real link click opens where pop-ups are blocked; the visible link below covers the rest.
+    const a = document.createElement('a')
+    a.href = url
+    a.target = '_blank'
+    a.rel = 'noopener noreferrer'
+    a.click()
+    setSentUrl(url)
   }
 
   return (
@@ -108,7 +116,15 @@ export function Contact() {
             <WhatsAppIcon className="button__icon" />
             {t.contact.submit}
           </button>
-          <p className="form__note">{t.contact.note}</p>
+          <p className="form__note" aria-live="polite">
+            {sentUrl ? (
+              <a className="form__fallback" href={sentUrl} target="_blank" rel="noopener noreferrer">
+                {t.contact.fallback}
+              </a>
+            ) : (
+              t.contact.note
+            )}
+          </p>
         </div>
       </form>
     </section>
