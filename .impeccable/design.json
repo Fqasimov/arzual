@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T07:24:16.384378+00:00",
+  "title": "Design System: Arzu Almazzadeh",
+  "extensions": {
+    "colorMeta": {
+      "bone": {
+        "role": "neutral",
+        "displayName": "Bone",
+        "canonical": "#e8e5e0",
+        "tonalRamp": [
+          "#272625",
+          "#464543",
+          "#676664",
+          "#868482",
+          "#a5a39f",
+          "#c4c2bd",
+          "#e0ded9",
+          "#f4f2f0"
+        ]
+      },
+      "sand": {
+        "role": "primary",
+        "displayName": "Sand Gold",
+        "canonical": "#948566",
+        "tonalRamp": [
+          "#2a261d",
+          "#4c4434",
+          "#71654e",
+          "#938465",
+          "#aea28b",
+          "#c9c1b2",
+          "#e2ded5",
+          "#f4f2ef"
+        ]
+      },
+      "sand-ink": {
+        "role": "primary",
+        "displayName": "Sand Ink",
+        "canonical": "#6b5f46",
+        "tonalRamp": [
+          "#2b261c",
+          "#4d4432",
+          "#71654d",
+          "#8d8471",
+          "#aaa394",
+          "#c6c2b8",
+          "#e0ded8",
+          "#f3f2f0"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1c1b18",
+        "tonalRamp": [
+          "#272623",
+          "#464542",
+          "#676664",
+          "#858583",
+          "#a4a3a2",
+          "#c2c2c1",
+          "#dededd",
+          "#f2f2f2"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink Two",
+        "canonical": "#55514a",
+        "tonalRamp": [
+          "#282623",
+          "#48453f",
+          "#696660",
+          "#87847f",
+          "#a5a39f",
+          "#c3c2bf",
+          "#dfdedc",
+          "#f3f2f2"
+        ]
+      },
+      "midnight": {
+        "role": "secondary",
+        "displayName": "Midnight Swatch",
+        "canonical": "#1a1e31",
+        "tonalRamp": [
+          "#222638",
+          "#414454",
+          "#636673",
+          "#82848f",
+          "#a1a3ab",
+          "#c1c2c7",
+          "#dddee1",
+          "#f2f2f3"
+        ]
+      },
+      "noir": {
+        "role": "secondary",
+        "displayName": "Noir Swatch",
+        "canonical": "#131212",
+        "tonalRamp": [
+          "#272626",
+          "#454545",
+          "#676666",
+          "#858484",
+          "#a4a3a3",
+          "#c2c2c2",
+          "#dedede",
+          "#f2f2f2"
+        ]
+      },
+      "bordeaux": {
+        "role": "secondary",
+        "displayName": "Bordeaux Swatch",
+        "canonical": "#3b1114",
+        "tonalRamp": [
+          "#451e20",
+          "#603d40",
+          "#7c6062",
+          "#968081",
+          "#b0a0a1",
+          "#cbbfc0",
+          "#e3dddd",
+          "#f4f2f2"
+        ]
+      },
+      "olive": {
+        "role": "secondary",
+        "displayName": "Olive Swatch",
+        "canonical": "#4e4c33",
+        "tonalRamp": [
+          "#28271a",
+          "#48462f",
+          "#696752",
+          "#878675",
+          "#a5a497",
+          "#c3c2ba",
+          "#dededa",
+          "#f2f2f1"
+        ]
+      },
+      "glint": {
+        "role": "tertiary",
+        "displayName": "Wet Ink Glint",
+        "canonical": "#e6d6ae",
+        "tonalRamp": [
+          "#29261f",
+          "#4a4538",
+          "#6d6653",
+          "#8e846c",
+          "#afa384",
+          "#d0c19d",
+          "#ebddbd",
+          "#f7f2e5"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "arzu": {
+        "displayName": "ARZU",
+        "purpose": "The tag's cropped letters at page scale, hero only."
+      },
+      "display": {
+        "displayName": "Display",
+        "purpose": "The hero promise."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles."
+      },
+      "name": {
+        "displayName": "Look name",
+        "purpose": "The name of each dress, set like a swatch card."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Detail and step titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Notes and leads."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Cloth lines, form labels, buttons, the tag."
+      }
+    },
+    "shadows": [
+      {
+        "name": "sheet-edge",
+        "value": "0 28px 56px -24px rgb(28 27 24 / 0.38)",
+        "purpose": "The intro sheet's lower edge as it lifts off the page."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-swipe",
+        "value": "cubic-bezier(0.32, 0.72, 0, 1)",
+        "purpose": "The sheet swipe and the page rising, 1150ms."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(0.77, 0, 0.175, 1)",
+        "purpose": "Picture unveil (clip-path), 1250ms."
+      },
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Press feedback 160ms, picture settle 1700ms."
+      },
+      {
+        "name": "ease-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "ARZU letters and the intro name rising."
+      },
+      {
+        "name": "dye",
+        "value": "900ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Ground colour change between swatches."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stack",
+        "value": "899px"
+      },
+      {
+        "name": "compact-header",
+        "value": "1100px"
+      },
+      {
+        "name": "narrow",
+        "value": "420px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Solid Button",
+      "kind": "button",
+      "refersTo": "button-solid",
+      "description": "Primary action, opens WhatsApp.",
+      "html": "<a class=\"ds-btn-solid\" href=\"#\">WHATSAPP-DA YAZIN</a>",
+      "css": ".ds-btn-solid{display:inline-flex;align-items:center;min-height:54px;padding:0 28px;background:#1c1b18;color:#e8e5e0;font:450 14px/1 'Jost Variable',Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:transform 160ms cubic-bezier(.23,1,.32,1),background-color 220ms ease}.ds-btn-solid:hover{background:#6b5f46}.ds-btn-solid:active{transform:scale(.97)}.ds-btn-solid:focus-visible{outline:1px solid #6b5f46;outline-offset:4px}"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Secondary action on any ground.",
+      "html": "<a class=\"ds-btn-line\" href=\"#\">KOLLEKSİYAYA BAXIN</a>",
+      "css": ".ds-btn-line{display:inline-flex;align-items:center;min-height:54px;padding:0 28px;border:1px solid rgb(148 133 102 / .6);color:#1c1b18;font:450 14px/1 'Jost Variable',Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:border-color 220ms ease,transform 160ms cubic-bezier(.23,1,.32,1)}.ds-btn-line:hover{border-color:#1c1b18}.ds-btn-line:active{transform:scale(.97)}"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "The hang-tag label with a punched hole.",
+      "html": "<span class=\"ds-tag\"><span class=\"ds-tag-hole\"></span>AZƏRBAYCANDA HAZIRLANIB</span>",
+      "css": ".ds-tag{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 10px;border:1px solid rgb(148 133 102 / .6);background:#e8e5e0;color:#6b5f46;font:450 11px/1.4 'Jost Variable',Jost,sans-serif;letter-spacing:.22em}.ds-tag-hole{width:7px;height:7px;border:1px solid rgb(148 133 102 / .6);border-radius:50%}"
+    },
+    {
+      "name": "Underline Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Consultation form field on the ink ground.",
+      "html": "<label class=\"ds-field\"><span>ADINIZ</span><input /></label>",
+      "css": ".ds-field{display:grid;gap:10px;background:#1c1b18;padding:16px;color:#ece9e3;font-family:'Jost Variable',Jost,sans-serif}.ds-field span{font-size:12px;letter-spacing:.2em;color:#b2ada3}.ds-field input{border:0;border-bottom:1px solid rgb(194 179 140 / .4);background:transparent;color:inherit;font-size:18px;padding:10px 0 12px;outline:none}.ds-field input:focus-visible{border-bottom-color:#c2b38c;box-shadow:0 1px 0 #c2b38c}"
+    },
+    {
+      "name": "Language Switch",
+      "kind": "nav",
+      "refersTo": "lang",
+      "description": "AZ / EN / RU, active one underlined.",
+      "html": "<div class=\"ds-lang\"><button aria-pressed=\"true\">AZ</button><button>EN</button><button>RU</button></div>",
+      "css": ".ds-lang{display:flex}.ds-lang button{min-width:40px;min-height:40px;border:0;background:none;font:450 12px 'Jost Variable',Jost,sans-serif;letter-spacing:.16em;color:#55514a;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:6px;cursor:pointer}.ds-lang button[aria-pressed=true]{color:#1c1b18;text-decoration-color:#6b5f46}.ds-lang button:hover{color:#1c1b18}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Hang Tag and the Swatch Book",
+    "overview": "The brand's own hang tag, unfolded to page scale: bone card, sand-gold geometric letters cropped by the edge, one gold cord. The collection is its swatch book: the page is dyed in the colour of the dress in view. The opening has the monogram drawing itself upward like ink, then the sheet is swiped up.",
+    "keyCharacteristics": [
+      "One family, Jost",
+      "Bone ground with sand-gold mark",
+      "Page dyed per dress",
+      "Square corners, 1px cord lines",
+      "Every section one tap from WhatsApp"
+    ],
+    "rules": [
+      {
+        "name": "The One Dye Rule",
+        "body": "The only saturated colour on the page is the colour of the dress in view.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tag Voice Rule",
+        "body": "Small spaced capitals belong to cloth, tags and fields; never above a heading.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Card Rule",
+        "body": "No shadows except the lifting sheet; depth comes from overlap.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do give each new look its own arrangement and ground.",
+      "Do keep claims to what the house confirmed."
+    ],
+    "donts": [
+      "Don't add a second typeface.",
+      "Don't use gradients, glass or rounded cards."
+    ]
+  }
+}
