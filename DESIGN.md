@@ -109,7 +109,7 @@ Visitor mode is Persuade: every section is one tap from WhatsApp.
 - **Sand** `#948566`: the monogram's gold. Large letters (ARZU, step numbers), the monogram, and the 1px cord lines. Never for small text.
 - **Sand ink** `#6b5f46`: sand deepened to pass contrast for small text on bone (labels, tag, hovers).
 - **Ink** `#1c1b18` / **Ink 2** `#55514a`: text and secondary text on bone (Ink 2 is about 6:1).
-- **Swatch grounds**: Midnight `#1a1e31`, Noir `#131212`, Bordeaux `#3b1114`, Olive `#4e4c33`, and Ink for the consultation and footer. Each re-points the role variables `--ground`, `--fg`, `--fg-2`, `--accent` and `--line` under `html[data-ground]`, so every component follows the dye.
+- **Swatch grounds**: Midnight `#1a1e31`, Noir `#131212`, Bordeaux `#3b1114`, Olive `#4e4c33`, and Ink for the consultation and footer. Each section carries `data-ground`; the role variables `--ground`, `--fg`, `--fg-2`, `--accent` and `--line` are set on `<html>` as the page scrolls, so every component follows the dye.
 - **Glint** `#e6d6ae`: only the wet front of the ink in the intro.
 - **Placeholder** `#d9d5ce`: the frame behind a photograph while it loads.
 - **Error** `#eab0a1`: form errors, on the ink ground only.
