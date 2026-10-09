@@ -114,13 +114,13 @@ Visitor mode is Persuade: every section is one tap from WhatsApp.
 - **Placeholder** `#d9d5ce`: the frame behind a photograph while it loads.
 - **Error** `#eab0a1`: form errors, on the ink ground only.
 
-The dye is a 900ms `background-color` / `color` transition on the body and header; elements that set their own `--fg-2` colour carry the same transition so nothing lags behind.
+The dye is a 600ms `background-color` / `color` transition on the body and header; elements that set their own `--fg-2` colour carry the same transition so nothing lags behind.
 
 ## Typography
 
 One family, Jost (variable, self-hosted via Fontsource, Latin, Latin Extended for Azerbaijani, Cyrillic for Russian). It is a near match for the tag's geometric capitals with the pointed A.
 
-- **ARZU** (weight 460, line-height 0.78): the tag's letters at page scale, cropped by the bottom of the hero.
+- **ARZU** (weight 460, line-height 0.78): the tag's letters at page scale, sitting whole on the bottom edge of the hero (cropping hid the Z's foot, so it read as a 7).
 - **Display / headline / name** (weight 300, tight negative tracking): the large voice. Look names stay at or under 6rem except Noir, where the name is set wide behind the photograph.
 - **Label** (12px, weight 450, +0.24em, capitals): the tag's "MADE IN AZERBAIJAN" voice. Cloth lines, form labels, buttons. Never above a heading.
 - **Body** 17px / 1.6, measure held near 30ch to 36rem.
@@ -151,7 +151,7 @@ Square corners everywhere. Circles appear only as punched tag holes (the tag lab
 - **Tag**: bone label with a 1px border and a punched hole.
 - **Language switch**: AZ / EN / RU buttons with `aria-pressed`, the active one underlined in the accent.
 - **Form**: underline fields, chip radios for the occasion, the submit opens WhatsApp with the message composed in the visitor's language.
-- **Picture**: frames unveil upward with `clip-path` (1250ms, `cubic-bezier(.77,0,.175,1)`) and settle from 1.08 scale, echoing the opening swipe.
+- **Picture**: frames unveil upward with `clip-path` (950ms, `cubic-bezier(.77,0,.175,1)`) and settle from 1.08 scale, echoing the opening swipe.
 
 ## Do's and Don'ts
 

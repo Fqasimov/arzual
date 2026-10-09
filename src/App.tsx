@@ -59,7 +59,7 @@ function useReveal(active: boolean) {
           io.unobserve(e.target)
         }
       },
-      { rootMargin: '0px 0px -12% 0px' },
+      { rootMargin: '0px 0px -5% 0px' },
     )
     document.querySelectorAll('.reveal:not(.is-in)').forEach((el) => io.observe(el))
     return () => io.disconnect()

@@ -22,7 +22,7 @@
   --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   --ease-swipe: cubic-bezier(0.32, 0.72, 0, 1);
-  --dye: 900ms cubic-bezier(0.4, 0, 0.2, 1);
+  --dye: 600ms cubic-bezier(0.4, 0, 0.2, 1);
 
   --header: 72px;
   --gutter: clamp(16px, 4vw, 56px);
@@ -441,11 +441,11 @@ textarea {
 
 .js .reveal {
   clip-path: inset(100% 0 0 0);
-  transition: clip-path 1250ms var(--ease-in-out);
+  transition: clip-path 950ms var(--ease-in-out);
 }
 .js .reveal img {
   transform: scale(1.08);
-  transition: transform 1700ms var(--ease-out);
+  transition: transform 1300ms var(--ease-out);
 }
 .js .reveal.is-in {
   clip-path: inset(0 0 0 0);
@@ -572,8 +572,8 @@ textarea {
   z-index: 0;
   display: flex;
   margin-left: -0.04em;
-  /* Letters run off the bottom edge, as they run off the card on the tag. */
-  margin-bottom: -0.17em;
+  /* The word sits on the section edge: the Z keeps its foot, so it does not read as a 7. */
+  margin-bottom: 0;
   padding-top: 32px;
   font-size: clamp(7rem, min(19.5vw, 31svh), 26rem);
   font-weight: 460;
