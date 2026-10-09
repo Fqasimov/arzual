@@ -114,14 +114,14 @@ Visitor mode is Persuade: every section is one tap from WhatsApp.
 - **Placeholder** `#d9d5ce`: the frame behind a photograph while it loads.
 - **Error** `#eab0a1`: form errors, on the ink ground only.
 
-The dye is a 600ms `background-color` / `color` transition on the body and header; elements that set their own `--fg-2` colour carry the same transition so nothing lags behind.
+The dye is scroll-linked, not timed: `useGround` in `src/App.tsx` blends the five role variables between two neighbouring swatches as the boundary between their sections approaches the middle of the screen (an eased blend over about 60% of the viewport height), so colour arrives with the dress instead of flipping at an edge. The swatch values are mirrored in that file. `--dye` is 0ms so nothing lags behind the scroll.
 
 ## Typography
 
 One family, Jost (variable, self-hosted via Fontsource, Latin, Latin Extended for Azerbaijani, Cyrillic for Russian). It is a near match for the tag's geometric capitals with the pointed A.
 
 - **ARZU** (weight 460, line-height 0.78): the tag's letters at page scale, sitting whole on the bottom edge of the hero (cropping hid the Z's foot, so it read as a 7).
-- **Display / headline / name** (weight 300, tight negative tracking): the large voice. Look names stay at or under 6rem except Noir, where the name is set wide behind the photograph.
+- **Display / headline / name** (weight 300, tight negative tracking): the large voice. Look names stay at or under 6rem except Noir, where the name is set wide above the photograph.
 - **Label** (12px, weight 450, +0.24em, capitals): the tag's "MADE IN AZERBAIJAN" voice. Cloth lines, form labels, buttons. Never above a heading.
 - **Body** 17px / 1.6, measure held near 30ch to 36rem.
 
@@ -131,14 +131,14 @@ One family, Jost (variable, self-hosted via Fontsource, Latin, Latin Extended fo
 
 - 12 columns, gutter `clamp(16px, 4vw, 56px)`, column gap `clamp(16px, 2vw, 28px)`.
 - Hero: copy in columns 1 to 6, the photograph in 8 to 12 at viewport height, ARZU in the second row cropped by the section edge, ALMAZZADEH set vertically in column 7.
-- Looks: one screen each, and each has its own arrangement (Midnight: close-up plus a hung flat-lay; Noir: name behind photo; Bordeaux and Olive: words centred beside the photograph on opposite sides).
+- Looks: one screen each, and each has its own arrangement (Midnight: close-up plus a hung flat-lay; Noir: name set wide above the photograph, never under it; Bordeaux and Olive: words centred beside the photograph on opposite sides).
 - Details: a sticky heading beside four close-ups of different sizes.
 - Process: four steps hung on one horizontal cord (vertical on phones).
 - Below 900px everything stacks; the hero photo comes first and the primary action stays in the first viewport.
 
 ## Elevation & Depth
 
-Flat. The only shadow is the intro sheet's lower edge (`0 28px 56px -24px`) as it lifts off the page. Depth otherwise comes from overlap: the Noir photograph lying over its name, the flat-lay overlapping the close-up on phones.
+Flat. The only shadow is the intro sheet's lower edge (`0 28px 56px -24px`) as it lifts off the page. Depth otherwise comes from overlap: the flat-lay overlapping the close-up on phones.
 
 ## Shapes
 

@@ -22,7 +22,7 @@
   --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   --ease-swipe: cubic-bezier(0.32, 0.72, 0, 1);
-  --dye: 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  --dye: 0ms linear; /* the colour is scroll-linked, so nothing lags behind it */
 
   --header: 72px;
   --gutter: clamp(16px, 4vw, 56px);
@@ -38,47 +38,8 @@
   --text-name: clamp(3rem, 1.4rem + 5.4vw, 6rem);
 }
 
-/* The swatch book: each dress dyes the page while it sits mid-screen. */
-html[data-ground='midnight'] {
-  --ground: #1a1e31;
-  --fg: #eceaf2;
-  --fg-2: #b6b7cb;
-  --accent: #cdbb91;
-  --line: rgb(205 187 145 / 0.45);
-  --scheme: dark;
-}
-html[data-ground='noir'] {
-  --ground: #131212;
-  --fg: #eeebe5;
-  --fg-2: #aca79e;
-  --accent: #c6b68d;
-  --line: rgb(198 182 141 / 0.42);
-  --scheme: dark;
-}
-html[data-ground='bordeaux'] {
-  --ground: #3b1114;
-  --fg: #f3e9e4;
-  --fg-2: #d6bcb4;
-  --accent: #dcc192;
-  --line: rgb(220 193 146 / 0.45);
-  --scheme: dark;
-}
-html[data-ground='olive'] {
-  --ground: #4e4c33;
-  --fg: #f3f1e3;
-  --fg-2: #d8d5bc;
-  --accent: #e6d6a6;
-  --line: rgb(230 214 166 / 0.5);
-  --scheme: dark;
-}
-html[data-ground='ink'] {
-  --ground: #1c1b18;
-  --fg: #ece9e3;
-  --fg-2: #b2ada3;
-  --accent: #c2b38c;
-  --line: rgb(194 179 140 / 0.4);
-  --scheme: dark;
-}
+/* The swatch book: App.tsx blends --ground, --fg, --fg-2, --accent and --line while scrolling,
+   from the tokens it mirrors for each dress. */
 
 /* ---------- Base ---------- */
 
@@ -601,8 +562,7 @@ textarea {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: var(--gap);
   align-content: end;
-  min-height: 64svh;
-  padding: clamp(112px, 16vw, 220px) var(--gutter) clamp(40px, 6vw, 80px);
+  padding: clamp(96px, 11vw, 150px) var(--gutter) clamp(32px, 4vw, 56px);
 }
 
 .collection__title {
@@ -630,8 +590,8 @@ textarea {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: var(--gap);
   align-content: center;
-  min-height: 100svh;
-  padding: clamp(72px, 10vw, 150px) var(--gutter);
+  min-height: min(100svh, 62rem);
+  padding: clamp(48px, 6vw, 88px) var(--gutter);
 }
 
 .look__name {
@@ -702,14 +662,14 @@ textarea {
   max-height: 46svh;
 }
 
-/* Noir: the name set wide, the photograph laid over its lower half. */
+/* Noir: the name set wide above the photograph, which stays clear of it. */
 .look--noir .look__name {
   position: relative;
   z-index: 0;
   grid-column: 1 / -1;
   grid-row: 1;
   justify-self: center;
-  margin-bottom: -0.3em;
+  margin-bottom: clamp(8px, 1.4vw, 24px);
   font-size: clamp(4rem, 2rem + 9vw, 11rem);
   color: var(--accent);
   transition: color var(--dye);
@@ -767,7 +727,7 @@ textarea {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: var(--gap);
-  padding: clamp(112px, 14vw, 200px) var(--gutter) clamp(80px, 10vw, 140px);
+  padding: clamp(72px, 9vw, 128px) var(--gutter) clamp(64px, 7vw, 104px);
 }
 
 .details__head {
@@ -858,7 +818,7 @@ textarea {
 /* ---------- Process: steps hung on one cord ---------- */
 
 .process {
-  padding: clamp(80px, 10vw, 140px) var(--gutter) clamp(112px, 14vw, 200px);
+  padding: clamp(56px, 7vw, 104px) var(--gutter) clamp(72px, 9vw, 128px);
 }
 
 .process__title {
@@ -930,7 +890,7 @@ textarea {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: var(--gap);
-  padding: clamp(112px, 14vw, 200px) var(--gutter) clamp(80px, 10vw, 140px);
+  padding: clamp(72px, 9vw, 128px) var(--gutter) clamp(56px, 7vw, 96px);
 }
 
 .contact__head {
@@ -1250,7 +1210,6 @@ textarea {
 
   .collection {
     gap: 18px;
-    min-height: 60svh;
   }
   .collection .collection__lead,
   .look .look__name,
@@ -1261,14 +1220,14 @@ textarea {
   .look {
     min-height: 0;
     gap: 22px;
-    padding-block: 72px;
+    padding-block: 48px;
   }
   .look .look__photo {
     max-height: none;
   }
   .look--noir .look__name {
     align-self: flex-start;
-    margin-bottom: -0.26em;
+    margin-bottom: 0;
     font-size: 26vw;
   }
   .look__second {
