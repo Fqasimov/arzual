@@ -4,7 +4,10 @@ export type Photo = { name: string; width: number; height: number; sizes: number
 
 const base = import.meta.env.BASE_URL
 
-export const srcSet = (p: Photo) => p.sizes.map((w) => `${base}looks/${p.name}-${w}.webp ${w}w`).join(', ')
+type Format = 'avif' | 'webp'
+
+export const srcSet = (p: Photo, format: Format = 'webp') =>
+  p.sizes.map((w) => `${base}looks/${p.name}-${w}.${format} ${w}w`).join(', ')
 export const src = (p: Photo) => `${base}looks/${p.name}-${p.sizes[p.sizes.length - 1]}.webp`
 
 export const HERO: Photo = { name: 'ivory-stairs', width: 1170, height: 1428, sizes: [720, 1170] }

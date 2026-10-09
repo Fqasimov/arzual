@@ -394,6 +394,12 @@ textarea {
   overflow: hidden;
 }
 
+.picture picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .picture img {
   width: 100%;
   height: 100%;
@@ -779,6 +785,12 @@ textarea {
   aspect-ratio: 1;
   overflow: hidden;
   background: var(--placeholder);
+}
+
+.detail__frame picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .detail__frame img {

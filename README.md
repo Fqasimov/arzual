@@ -54,7 +54,7 @@ The build is static and uses relative paths, so `dist/` can go on any host (Netl
 | `src/data/photos.ts` | Photos, their sizes, and which look they belong to. |
 | `src/styles.css` | Tokens, the per-dress grounds (`html[data-ground=…]`) and all layout. |
 | `assets-src/` | The owner's original photos and logo screenshot. |
-| `scripts/export-images.py` | Crops the originals and writes the WebP sizes into `public/looks/`. |
+| `scripts/export-images.py` | Crops the originals and writes AVIF sizes (with WebP fallbacks) into `public/looks/`. |
 | `scripts/trace-logo.py` | Traces the logo into `src/brand/logo-path.ts` and `src/brand/logo-flow.png`. |
 
 ## Adding a look

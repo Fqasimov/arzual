@@ -32,16 +32,19 @@ export function Details() {
           return (
             <li key={key} className={`detail detail--${key}`}>
               <div className="detail__frame reveal" onPointerMove={follow}>
-                <img
-                  src={src(photo)}
-                  srcSet={srcSet(photo)}
-                  sizes="(min-width: 900px) 30vw, 80vw"
-                  width={photo.width}
-                  height={photo.height}
-                  alt={item.title}
-                  loading="lazy"
-                  decoding="async"
-                />
+                <picture>
+                  <source type="image/avif" srcSet={srcSet(photo, 'avif')} sizes="(min-width: 900px) 30vw, 80vw" />
+                  <img
+                    src={src(photo)}
+                    srcSet={srcSet(photo)}
+                    sizes="(min-width: 900px) 30vw, 80vw"
+                    width={photo.width}
+                    height={photo.height}
+                    alt={item.title}
+                    loading="eager"
+                    decoding="async"
+                  />
+                </picture>
               </div>
               <h3 className="detail__title">{item.title}</h3>
               <p className="detail__text">{item.text}</p>

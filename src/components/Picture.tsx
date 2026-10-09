@@ -16,18 +16,22 @@ type Props = {
 export function Picture({ photo, alt, sizes, className, focus, eager }: Props) {
   return (
     <div className={`picture reveal ${className ?? ''}`}>
-      <img
-        src={src(photo)}
-        srcSet={srcSet(photo)}
-        sizes={sizes}
-        width={photo.width}
-        height={photo.height}
-        alt={alt}
-        loading={eager ? 'eager' : 'lazy'}
-        fetchPriority={eager ? 'high' : undefined}
-        decoding="async"
-        style={focus ? { objectPosition: focus } : undefined}
-      />
+      <picture>
+        <source type="image/avif" srcSet={srcSet(photo, 'avif')} sizes={sizes} />
+        <img
+          src={src(photo)}
+          srcSet={srcSet(photo)}
+          sizes={sizes}
+          width={photo.width}
+          height={photo.height}
+          alt={alt}
+          // The files are small, so everything is fetched up front: a frame is never empty when it unveils.
+          loading="eager"
+          fetchPriority={eager ? 'high' : undefined}
+          decoding="async"
+          style={focus ? { objectPosition: focus } : undefined}
+        />
+      </picture>
     </div>
   )
 }

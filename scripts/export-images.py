@@ -1,4 +1,4 @@
-"""Crop the owner's photos and export WebP sizes into public/looks/.
+"""Crop the owner's photos and export AVIF (with a WebP fallback) sizes into public/looks/.
 
 Run: python3 scripts/export-images.py   (needs Pillow)
 Crops remove screenshot bars and app overlays from the source images.
@@ -33,8 +33,9 @@ for name, (src, box, widths) in PHOTOS.items():
     for w in widths:
         h = round(im.height * w / im.width)
         out = im.resize((w, h), Image.LANCZOS) if w != im.width else im
+        out.save(OUT / f"{name}-{w}.avif", "AVIF", quality=58, speed=2)
         out.save(OUT / f"{name}-{w}.webp", "WEBP", quality=82, method=6)
-        print(f"{name}-{w}.webp", w, h)
+        print(f"{name}-{w}", w, h)
 
 # Social preview image.
 og = Image.open(SRC / "ivory-stairs.jpg").convert("RGB").crop((0, 200, 1170, 814)).resize((1200, 630), Image.LANCZOS)
