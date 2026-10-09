@@ -178,7 +178,7 @@ textarea {
 }
 .site[data-phase='rising'] {
   transform: translateY(0);
-  transition: transform 1150ms var(--ease-swipe);
+  transition: transform 850ms var(--ease-swipe);
 }
 
 /* ---------- Header ---------- */
@@ -553,8 +553,8 @@ textarea {
 
 .hero__arzu span {
   display: block;
-  transition: transform 1400ms var(--ease-expo);
-  transition-delay: calc(260ms + var(--i) * 70ms);
+  transition: transform 1000ms var(--ease-expo);
+  transition-delay: calc(120ms + var(--i) * 55ms);
 }
 
 .site[data-phase='intro'] .hero__arzu span {

@@ -15,7 +15,7 @@ const INPUT: LogoIntroProps = { background: null, ink: BRAND_COLORS.sand, glint:
 
 // A flick: fast off the finger, long settle. Same curve the page uses to rise.
 const SWIPE = 'cubic-bezier(0.32, 0.72, 0, 1)'
-const SWIPE_MS = 1150
+const SWIPE_MS = 850
 
 /**
  * The opening: the monogram draws itself from the teardrop up (a Remotion composition,
@@ -49,10 +49,10 @@ export function Intro({ onReveal, onDone }: Props) {
       onReveal()
 
       if (reduce.current) {
-        sheet.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 450, easing: 'ease', fill: 'forwards' }).finished.then(finish)
+        sheet.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 350, easing: 'ease', fill: 'forwards' }).finished.then(finish)
         return
       }
-      const duration = fast ? 800 : SWIPE_MS
+      const duration = fast ? 600 : SWIPE_MS
       // The mark lifts away slightly faster than the sheet, so the sheet reads as paper with depth.
       stage.animate(
         [
@@ -67,22 +67,22 @@ export function Intro({ onReveal, onDone }: Props) {
     }
 
     const skip = () => leave(true)
-    const onEnded = () => timers.push(window.setTimeout(() => leave(false), 260))
+    const onEnded = () => timers.push(window.setTimeout(() => leave(false), 80))
 
     if (reduce.current) {
-      timers.push(window.setTimeout(() => leave(false), 1100))
+      timers.push(window.setTimeout(() => leave(false), 700))
     } else if (player) {
       player.addEventListener('ended', onEnded)
       // Start once the flow map and the face are in, but never keep anyone waiting long.
       const ready = Promise.all([loadFlow(), document.fonts.load('400 20px "Jost Variable"')])
-      const timeout = new Promise((r) => setTimeout(r, 1500))
+      const timeout = new Promise((r) => setTimeout(r, 700))
       Promise.race([ready, timeout])
         .catch(() => undefined)
         .then(() => {
           if (!disposed && !leaving) player.play()
         })
       // If playback cannot start at all, the page still opens.
-      timers.push(window.setTimeout(() => leave(false), 9000))
+      timers.push(window.setTimeout(() => leave(false), 6000))
     }
 
     window.addEventListener('pointerdown', skip)

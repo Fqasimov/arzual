@@ -6,7 +6,7 @@ The design takes the brand's own hang tag as its world: a bone card, sand-gold l
 
 ## The intro
 
-The monogram draws itself upward from the bottom of its teardrop, as if ink were running along the strokes. Then the name rises, a gold cord draws out, and the bone sheet is swiped up to uncover the site.
+The monogram draws itself upward from the bottom of its teardrop, as if ink were running along the strokes (the whole opening takes about 3 seconds). Then the name rises, a gold cord draws out, and the bone sheet is swiped up to uncover the site.
 
 - It is a **Remotion** composition (`src/remotion/LogoIntro.tsx`). The site plays it with `@remotion/player`, and the swipe is done with the Web Animations API (`src/components/Intro.tsx`).
 - The drawing uses an "ink-flow" map (`src/brand/logo-flow.png`). For every pixel of the monogram it stores how far ink has to travel along the strokes from the teardrop, and the vector path keeps the edges sharp. Both files come from `scripts/trace-logo.py`, which traces the original logo screenshot.
